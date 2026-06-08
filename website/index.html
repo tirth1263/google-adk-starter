@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A deployment-ready showcase for a Google ADK starter agent that sends email through Resend and uses Nebius AI Studio for inference."
+    />
+    <title>Google ADK Starter Agent</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Google ADK Starter home">
+        <span class="brand-mark">ADK</span>
+        <span>Google ADK Starter</span>
+      </a>
+      <nav class="nav-links" aria-label="Project links">
+        <a href="#features">Features</a>
+        <a href="#setup">Setup</a>
+        <a href="#architecture">Architecture</a>
+        <a class="nav-button" href="https://github.com/tirth1263/google-adk-starter">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Google ADK + Nebius + Resend</p>
+          <h1>Build an email-sending AI agent with a real API integration.</h1>
+          <p class="hero-text">
+            A clean starter project for developers who want to move beyond toy agents and learn a practical ADK pattern: one agent, one external tool, and production-friendly configuration.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="https://github.com/tirth1263/google-adk-starter">View Repository</a>
+            <a class="secondary-action" href="#setup">Read Setup</a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="./assets/adk-email-agent.png" alt="Illustration of an ADK email agent sending structured notifications" />
+        </figure>
+      </section>
+
+      <section class="signal-strip" aria-label="Project highlights">
+        <div>
+          <strong>ADK root_agent</strong>
+          <span>CLI and dev UI ready</span>
+        </div>
+        <div>
+          <strong>LiteLLM model wrapper</strong>
+          <span>Nebius-powered inference</span>
+        </div>
+        <div>
+          <strong>Resend tool</strong>
+          <span>HTML email delivery</span>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">What is included</p>
+          <h2>A starter that behaves like a real project.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="icon-pill">01</span>
+            <h3>Single-purpose agent</h3>
+            <p>EmailAgent focuses on sending clear, structured email notifications through a tool call.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-pill">02</span>
+            <h3>External API tool</h3>
+            <p>The Resend integration shows how ADK agents can safely call provider APIs and return useful results.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-pill">03</span>
+            <h3>Configurable model</h3>
+            <p>Nebius model, API key, and base URL are controlled through environment variables.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-pill">04</span>
+            <h3>Testable behavior</h3>
+            <p>Pytest coverage mocks email delivery so the tool can be checked without sending real messages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="setup">
+        <div class="section-heading">
+          <p class="eyebrow">Run it locally</p>
+          <h2>Install, configure, and start the ADK agent.</h2>
+        </div>
+        <div class="terminal-panel" aria-label="Installation commands">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <pre><code>pip install -r requirements.txt
+cp .env.example .env
+
+adk run email_adk_agent
+
+# Or open the ADK development UI
+adk web</code></pre>
+        </div>
+      </section>
+
+      <section class="section architecture" id="architecture">
+        <div class="section-heading">
+          <p class="eyebrow">Flow</p>
+          <h2>From user request to delivered email.</h2>
+        </div>
+        <div class="flow" aria-label="Architecture flow">
+          <div class="flow-node">User request</div>
+          <div class="flow-arrow" aria-hidden="true"></div>
+          <div class="flow-node">ADK EmailAgent</div>
+          <div class="flow-arrow" aria-hidden="true"></div>
+          <div class="flow-node">send_email tool</div>
+          <div class="flow-arrow" aria-hidden="true"></div>
+          <div class="flow-node">Resend API</div>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div>
+          <p class="eyebrow">Ready to fork</p>
+          <h2>Use it as a base for notification systems, onboarding flows, and workflow agents.</h2>
+        </div>
+        <a class="primary-action" href="https://github.com/tirth1263/google-adk-starter">Open on GitHub</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Google ADK Starter Agent</span>
+      <span>Built for practical agent development.</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
